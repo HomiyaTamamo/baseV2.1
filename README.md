@@ -13,7 +13,7 @@ If you can hardly open the page or load the background images, report to me with
 - Q：这是什么？
 - A：这是明日方舟集成战略比赛荆楚歌的计分器。
 - Q；程序主要完成人员都有谁？
-- A：我写了V1.0，因为性能太烂，荆楚歌群内大佬@锦州南阳餐馆（https://github.com/cirisus）写了V2.0。这一版修复了V2.0的一个bug，即树洞数量可以无限添加的bug。虽然计分人员大概率不会把这个bug玩出来ovo。
+- A：我写了V1.0，因为性能太烂，荆楚歌群内大佬[锦州南阳餐馆]（https://github.com/cirisus）写了V2.0。这一版修复了V2.0的一个bug，即树洞数量可以无限添加的bug。虽然计分人员大概率不会把这个bug玩出来ovo。
 - Q：那怎么链接跑你这来了？
 - A：我修完bug后就直接上传了:D
 - Q：那V2.0在哪里？
