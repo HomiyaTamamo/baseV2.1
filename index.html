@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>集成战略#5计分器</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preload" href="rules.json" as="fetch" type="application/json" crossorigin="anonymous">
+    <script src="rules.min.js"></script>
+</head>
+<body>
+    <div id="topbar">
+        <div class="logo"></div>
+        <div class="title"></div>
+    </div>
+    <div id="bg"></div>
+    <div id="calculator">
+        <div class="key">
+            <div id="user-input">
+                <div class="username">
+                    <label for="username">玩家名称</label>
+                    <input type="text" id="username" placeholder="请输入用户名">
+                </div>
+                <div class="userteam">
+                    <label for="userteam">使用分队</label>
+                    <select id="userteam">
+                        <option value="none">点击选择</option>
+                        <option value="option">因地制宜分队</option>
+                        <option value="option">魂灵护送分队</option>
+                        <option value="option">博闻广记分队</option>
+                        <option value="option">指挥分队</option>
+                        <option value="option">集群分队</option>
+                        <option value="option">后勤分队</option>
+                        <option value="option">矛头分队</option>
+                        <option value="option">突击战术分队</option>
+                        <option value="option">堡垒战术分队</option>
+                        <option value="option">远程战术分队</option>
+                        <option value="option">破坏战术分队</option>
+                        <option value="option">高规格分队</option>
+                        <option value="special">蓝图♿♿♿♿</option>
+                    </select>
+                </div>
+            </div>
+            <div id="bonus">
+                <div class="level3">
+                    <span class="layer-title">第三层</span>
+                    <div class="item-container">
+                        <div class="check">
+                            <span class="checkname">溃乱魔典</span>
+                            <span class="counter-label">0</span>
+                        </div>
+                        <div class="check">
+                            <span class="checkname">大棋一盘</span>
+                            <span class="type">
+                                <input type="checkbox" value="苦难" id="era">
+                                <label>苦难</label>
+                            </span>
+                            <span class="counter-label">0</span>
+                        </div>
+                        <div class="check" data-type="boss3">
+                            <span class="checkname">BOSS FIGHT</span>
+                            <span class="type">
+                                <input type="checkbox" value="卫国前夜" id="era">
+                                <label>卫国前夜</label>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="level4">
+                    <span class="layer-title">第四层</span>
+                    <div class="item-container">
+                        <div class="check">
+                            <span class="checkname">朽败考察</span>
+                            <span class="counter-label">0</span>
+                            <span class="type">
+                                <input type="checkbox" value="金融/魔王" id="era">
+                                <label>金融/魔王</label>
+                            </span>
+                        </div>
+                        <div class="check">
+                            <span class="checkname">猩红甬道</span>
+                            <span class="counter-label">0</span>
+                            <span class="type">
+                                <input type="checkbox" value="天灾/苦难/金融" id="era">
+                                <label>天灾/苦难/金融</label>
+                            </span>
+                        </div>
+                        <div class="check">
+                            <span class="checkname">假想对冲</span>
+                            <span class="counter-label">0</span>
+                            <span class="type">
+                                <input type="checkbox" value="奇观/魔王" id="era">
+                                <label>奇观/魔王</label>
+                            </span>
+                        </div>
+                        <div class="check">
+                            <span class="checkname">年代断层</span>
+                            <span class="counter-label">0</span>
+                            <span class="type">
+                                <input type="checkbox" value="魔王/天灾/金融" id="era">
+                                <label>魔王/天灾/金融</label>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="level5">
+                    <span class="layer-title">第五层</span>
+                    <div class="item-container">
+                        <div class="check">
+                            <span class="checkname">计划耕种</span>
+                            <span class="counter-label">0</span>
+                            <span class="type">
+                                <input type="checkbox" value="苦难/奇观" id="era">
+                                <label>苦难/奇观</label>
+                            </span>
+                        </div>
+                        <div class="check">
+                            <span class="checkname">寄人城池下</span>
+                            <span class="counter-label">0</span>
+                            <span class="type">
+                                <input type="checkbox" value="金融/奇观" id="era">
+                                <label>金融/奇观</label>
+                            </span>
+                        </div>
+                        <div class="check">
+                            <span class="checkname">通道封锁</span>
+                            <span class="counter-label">0</span>
+                            <span class="type">
+                                <input type="checkbox" value="奇观" id="era">
+                                <label>奇观</label>
+                            </span>
+                        </div>
+                        <div class="check">
+                            <span class="checkname">无罪净土</span>
+                            <span class="counter-label">0</span>
+                            <span class="type">
+                                <input type="checkbox" value="奇观" id="era">
+                                <label>奇观</label>
+                            </span>
+                        </div>
+                        <div class="check">
+                            <span class="checkname">巫咒同盟</span>
+                            <span class="counter-label">0</span>
+                            <span class="type">
+                                <input type="checkbox" value="奇观" id="era">
+                                <label>奇观</label>
+                            </span>
+                        </div>
+                        <div class="check">
+                            <span class="checkname">残损学院</span>
+                            <span class="counter-label">0</span>
+                        </div>
+                        <div class="bossfight">
+                            <div class="check" data-type="boss5">
+                                <span class="checkname">紧急授课</span>
+                                <span class="type">
+                                    <input type="checkbox" value="混乱" id="chaos">
+                                    <label>混乱</label>
+                                    <input type="checkbox" value="无漏" id="no-leak">
+                                    <label>无漏</label>
+                                </span>
+                            </div>
+                            <div class="check" data-type="boss5">
+                                <span class="checkname">朝谒</span>
+                                <span class="type">
+                                    <input type="checkbox" value="金融/奇观/拥挤" id="era">
+                                    <label>金融/奇观/拥挤</label>
+                                    <input type="checkbox" value="混乱" id="chaos">
+                                    <label>混乱</label>
+                                    <input type="checkbox" value="无漏" id="no-leak">
+                                    <label>无漏</label>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="level6">
+                    <span class="layer-title">第六层</span>
+                    <div class="item-container">
+                        <div class="check">
+                            <span class="checkname">神圣的渴求</span>
+                            <span class="counter-label">0</span>
+                            <span class="type">
+                                <input type="checkbox" value="奇观/天灾" id="era">
+                                <label>奇观/天灾</label>
+                            </span>
+                        </div>
+                        <div class="check">
+                            <span class="checkname">谋求共识</span>
+                            <span class="counter-label">0</span>
+                            <span class="type">
+                                <input type="checkbox" value="金融/奇观" id="era">
+                                <label>金融/奇观</label>
+                            </span>
+                        </div>
+                        <div class="check" data-type="boss5">
+                            <span class="checkname">圣城</span>
+                            <span class="type">
+                                <input type="checkbox" value="奇观/拥挤/魔王" id="era">
+                                <label>奇观/拥挤/魔王</label>
+                                <input type="checkbox" value="混乱" id="chaos">
+                                <label>混乱</label>
+                                <input type="checkbox" value="无漏" id="no-leak">
+                                <label>无漏</label>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="conduction">
+                    <span class="layer-title">特殊关卡</span>
+                    <div class="item-container">
+                        <div class="check" data-type="egg">
+                            <span class="checkname">劫虚济实</span>
+                            <span class="type">
+                                <input type="checkbox" value="无漏" id="no-leak" checked disabled>
+                                <label>无漏</label>
+                                <input type="checkbox" value="紧急" id="emergency">
+                                <label for="emergency">紧急</label>
+                            </span>
+                        </div>
+                        <div class="check" data-type="egg">
+                            <span class="checkname">信号灯</span>
+                            <span class="type">
+                                <input type="checkbox" value="无漏" id="no-leak" checked disabled>
+                                <label>无漏</label>
+                                <input type="checkbox" value="紧急" id="emergency">
+                                <label for="emergency">紧急</label>
+                            </span>
+                        </div>
+                        <div class="check" data-type="egg">
+                            <span class="checkname">战场侧面</span>
+                            <span class="type">
+                                <input type="checkbox" value="紧急" id="emergency">
+                                <label for="emergency">紧急</label>
+                            </span>
+                        </div>
+                        <div class="check" data-type="egg">
+                            <span class="checkname">鸭速公路</span>
+                            <span class="counter-label" data-max="4">0</span>
+                            <span class="type">
+                                <input type="checkbox" value="紧急" id="emergency" checked disabled>
+                                <label for="emergency">紧急</label>
+                                <input type="checkbox" value="无漏" id="no-leak">
+                                <label>无漏</label>
+                            </span>
+                        </div>
+                        <div class="check" data-type="face">
+                            <span class="checkname">狭路相逢</span>
+                            <span class="counter-label">0</span>
+                        </div>
+                        <div class="check" data-type="boss3">
+                            <span class="checkname">叙事邀约</span>
+                            <span class="type">
+                                <input type="checkbox" value="无漏" id="no-leak">
+                                <label>无漏</label>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="operation">
+                    <div id="withdrawal">
+                        <div></div>
+                        <label for="money-get">取钱数量</label>
+                        <input type="number" id="m-count" placeholder="0">
+                    </div>
+                    <div id="emergentbattle">
+                        <div></div>
+                        <label for="collection-amount">紧急数量</label>
+                        <input type="number" id="eb-count" placeholder="0">
+                    </div>
+                    <div id="collection">
+                        <div></div>
+                        <label for="collection-amount">藏品数量</label>
+                        <input type="number" id="c-count" placeholder="0">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="multiplier">
+            <div class="fortune">
+                <h2>特殊加分与权重</h2>
+                <div class="special-enemy">
+                    <div class="counter-box duck" onclick="increment(this)" oncontextmenu="decrement(this, e); return false;">
+                        <span class="counter-label">0</span>
+                    </div>
+                    <div class="counter-box bear" onclick="increment(this)" oncontextmenu="decrement(this, e); return false;">
+                        <span class="counter-label">0</span>
+                    </div>
+                    <div class="counter-box dog" onclick="increment(this)" oncontextmenu="decrement(this, e); return false;">
+                        <span class="counter-label">0</span>
+                    </div>
+                    <div class="counter-box mouse" onclick="increment(this)" oncontextmenu="decrement(this, e); return false;">
+                        <span class="counter-label">0</span>
+                    </div>
+                </div>
+                <div class="temp-recruit">
+                    <div class="counter-box six-star" onclick="increment(this)" oncontextmenu="decrement(this, e); return false;">
+                        <span class="counter-label">0</span>
+                    </div>
+                    <div class="counter-box five-star" onclick="increment(this)" oncontextmenu="decrement(this, e); return false;">
+                        <span class="counter-label">0</span>
+                    </div>
+                    <div class="counter-box four-star" onclick="increment(this)" oncontextmenu="decrement(this, e); return false;">
+                        <span class="counter-label">0</span>
+                    </div>
+                </div>
+                <div class="limited-check">
+                    <div class="counter-box crowd" onclick="increment(this)" oncontextmenu="decrement(this, e); return false;">
+                        <span class="counter-label">0</span>
+                    </div>
+                    <div class="counter-box babel" onclick="increment(this)" oncontextmenu="decrement(this, e); return false;">
+                        <span class="counter-label" data-max="1">0</span>
+                    </div>
+                    <div class="counter-box beyond" onclick="increment(this, event)" oncontextmenu="decrement(this, event); return false;">
+                        <span class="counter-label">0</span>
+                        <span class="depth-label">0</span>
+                    </div>
+                </div>
+                <div class="no-wrap">
+                    <button onclick="addHole()">新增树洞</button>
+                    <button onclick="rmvHole()">移除树洞</button>
+                </div>
+            </div>
+            <div class="limitation">
+                <div id="ban">
+                    <div class="ban-weight">
+                        <label>维什戴尔招募情况：</label>
+                        <div>
+                            <input type="radio" id="option-no" name="wishdale" value="no" checked>
+                            <label for="option-no">未招募</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="option-yes" name="wishdale" value="yes">
+                            <label for="option-yes">招募</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="option-yee" name="wishdale" value="yee">
+                            <label for="option-yee">博士银印未招募</label>
+                        </div>
+                    </div>
+                    <div class="ban-weight">
+                        <label for="ban-select">博士银印招募情况：</label>
+                        <select id="ban-select">
+                            <option value="none">无</option>
+                            <option value="逻各斯">逻各斯</option>
+                            <option value="麒麟R夜刀">麒麟R夜刀</option>
+                            <option value="傀影">傀影</option>
+                            <option value="阿斯卡纶">阿斯卡纶</option>
+                            <option value="纯烬艾雅法拉">纯烬艾雅法拉</option>
+                            <option value="塑心">塑心</option>
+                            <option value="凯尔希">凯尔希</option>
+                            <option value="伊内丝">伊内丝</option>
+                            <option value="乌尔比安">乌尔比安</option>
+                            <option value="妮芙">妮芙</option>
+                        </select>
+                        <div>
+                            <input type="checkbox" id="doctor-silver" name="doctor-silver" value="no" checked>
+                            <label for="doctor-silver">未招募</label>
+                        </div>
+                    </div>
+                    <div class="leverage" style="display: flex; justify-content: space-around;">
+                        <div class="ban-weight" style="display: flex; flex-direction: column;">
+                            <div class="no-wrap">
+                                <label>5%权重BAN位：</label>
+                                <button onclick="selectAll(this)">全</button>
+                                <button onclick="deselectAll(this)">反</button>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="逻各斯" name="逻各斯">
+                                <label for="逻各斯">逻各斯</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="麒麟R夜刀" name="麒麟R夜刀">
+                                <label for="麒麟R夜刀">麒麟R夜刀</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="傀影" name="傀影">
+                                <label for="傀影">傀影</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="阿斯卡纶" name="阿斯卡纶">
+                                <label for="阿斯卡纶">阿斯卡纶</label>
+                            </div>
+                        </div>
+                        <div class="ban-weight" style="display: flex; flex-direction: column;">
+                            <div class="no-wrap">
+                                <label>3%权重BAN位：</label>
+                                <button onclick="selectAll(this)">全</button>
+                                <button onclick="deselectAll(this)">反</button>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="纯烬艾雅法拉" name="纯烬艾雅法拉">
+                                <label for="纯烬艾雅法拉">纯烬艾雅法拉</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="塑心" name="塑心">
+                                <label for="塑心">塑心</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="凯尔希" name="凯尔希">
+                                <label for="凯尔希">凯尔希</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="伊内丝" name="伊内丝">
+                                <label for="伊内丝">伊内丝</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="乌尔比安" name="乌尔比安">
+                                <label for="乌尔比安">乌尔比安</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="妮芙" name="妮芙">
+                                <label for="妮芙">妮芙</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="point">
+                <h2>分数统计</h2>
+                <div id="score-container">
+                    <div>
+                    <label for="origin-score">原始分数：</label>
+                    <input type="number" id="origin-score">
+                    <button onclick="calcBonus()">计算</button>
+                    </div>
+                    <span class="final-score">最终分数：</p>
+                </div>
+            </div>
+        </div>
+        <div id="dev-info">
+            <span>UI/UX functionally refactored and optimized by cirisus, HUST</span>
+            <span>V1.0 Designed By 帕琪 From CUG 艰苦朴素 求真务实</span>
+        </div>
+    </div>
+    <script src="logic.js"></script>
+</body>
+</html>

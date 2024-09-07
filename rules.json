@@ -1,0 +1,253 @@
+{
+    "teamLimit": [
+        {
+            "name": "蓝图♿♿♿♿"
+        },
+        {
+            "name": "因地制宜分队"
+        },
+        {
+            "name": "魂灵护送分队"
+        },
+        {
+            "name": "博闻广记分队"
+        },
+        {
+            "name": "指挥分队"
+        },
+        {
+            "name": "集群分队"
+        },
+        {
+            "name": "后勤分队"
+        },
+        {
+            "name": "矛头分队"
+        },
+        {
+            "name": "突击战术分队"
+        },
+        {
+            "name": "堡垒战术分队"
+        },
+        {
+            "name": "远程战术分队"
+        },
+        {
+            "name": "破坏战术分队"
+        },
+        {
+            "name": "高规格分队"
+        }
+    ],
+    "checkBonus": [
+        {
+            "name": "溃乱魔典",
+            "baseScore": 30,
+            "conditions": {}
+        },
+        {
+            "name": "大棋一盘",
+            "baseScore": 20,
+            "conditions": {
+                "苦难": 20
+            }
+        },
+        {
+            "name": "猩红甬道",
+            "baseScore": 40,
+            "conditions": {
+                "天灾": 20,
+                "苦难": 20,
+                "金融": 20
+            }
+        },
+        {
+            "name": "假想对冲",
+            "baseScore": 30,
+            "conditions": {
+                "奇观": 20,
+                "魔王": 20
+            }
+        },
+        {
+            "name": "朽败考察",
+            "baseScore": 20,
+            "conditions": {
+                "金融": 20,
+                "魔王": 20
+            }
+        },
+        {
+            "name": "年代断层",
+            "baseScore": 0,
+            "conditions": {
+                "魔王": 20,
+                "天灾": 20,
+                "金融": 20
+            }
+        },
+        {
+            "name": "计划耕种",
+            "baseScore": 70,
+            "conditions": {
+                "苦难": 20,
+                "奇观": 20
+            }
+        },
+        {
+            "name": "寄人城池下",
+            "baseScore": 50,
+            "conditions": {
+                "金融": 20,
+                "奇观": 20
+            }
+        },
+        {
+            "name": "通道封锁",
+            "baseScore": 30,
+            "conditions": {
+                "奇观": 20
+            }
+        },
+        {
+            "name": "无罪净土",
+            "baseScore": 30,
+            "conditions": {
+                "奇观": 20
+            }
+        },
+        {
+            "name": "巫咒同盟",
+            "baseScore": 30,
+            "conditions": {
+                "奇观": 20
+            }
+        },
+        {
+            "name": "残损学院",
+            "baseScore": 20,
+            "conditions": {}
+        },
+        {
+            "name": "谋求共识",
+            "baseScore": 70,
+            "conditions": {
+                "金融": 20,
+                "奇观": 20
+            }
+        },
+        {
+            "name": "神圣的渴求",
+            "baseScore": 40,
+            "conditions": {
+                "奇观": 20,
+                "天灾": 20
+            }
+        },
+        {
+            "name": "BOSS FIGHT",
+            "baseScore": 30,
+            "conditions": {
+                "卫国前夜": 30
+            }
+        },
+        {
+            "name": "紧急授课",
+            "baseScore": 0,
+            "conditions": {
+                "混乱": 20,
+                "无漏": 50
+            }
+        },
+        {
+            "name": "朝谒",
+            "baseScore": 120,
+            "conditions": {
+                "金融": 20,
+                "奇观": 20,
+                "拥挤": 20,
+                "混乱": 20,
+                "无漏": 50
+            }
+        },
+        {
+            "name": "圣城",
+            "baseScore": 170,
+            "conditions": {
+                "奇观": 50,
+                "拥挤": 50,
+                "魔王": 50,
+                "混乱": 30,
+                "无漏": 50
+            }
+        },
+        {
+            "name": "信号灯",
+            "baseScore": 0,
+            "conditions": {
+                "紧急": 25,
+                "无漏": 25
+            }
+        },
+        {
+            "name": "劫虚济实",
+            "baseScore": 0,
+            "conditions": {
+                "紧急": 25,
+                "无漏": 25
+            }
+        },
+        {
+            "name": "战场侧面",
+            "baseScore": 20,
+            "conditions": {
+                "紧急": 20
+            }
+        },
+        {
+            "name": "鸭速公路",
+            "baseScore": 20,
+            "conditions": {
+                "无漏": 40
+            }
+        },
+        {
+            "name": "叙事邀约",
+            "baseScore": 0,
+            "conditions": {
+                "无漏": 40
+            }
+        },
+        {
+            "name": "狭路相逢",
+            "baseScore": 10,
+            "conditions": {}
+        }
+    ],
+    "specialBonus": [
+        { "name": "duck", "point": 10 },
+        { "name": "bear", "point": 10 },
+        { "name": "dog", "point": 10 },
+        { "name": "mouse", "point": 10 },
+        { "name": "six-star", "point": 50 },
+        { "name": "five-star", "point": 20 },
+        { "name": "four-star", "point": 10 },
+        { "name": "crowd", "point": 15 },
+        { "name": "beyond", "point": 20 },
+        { "name": "babel", "point": 20 }
+    ],
+    "weightKey": [
+        { "name": "逻各斯", "weight": 0.05 },
+        { "name": "麒麟R夜刀", "weight": 0.05 },
+        { "name": "傀影", "weight": 0.05 },
+        { "name": "阿斯卡纶", "weight": 0.05 },
+        { "name": "纯烬艾雅法拉", "weight": 0.03 },
+        { "name": "塑心", "weight": 0.03 },
+        { "name": "凯尔希", "weight": 0.03 },
+        { "name": "伊内丝", "weight": 0.03 },
+        { "name": "乌尔比安", "weight": 0.03 },
+        { "name": "妮芙", "weight": 0.03 },
+        { "name": "维什戴尔", "weight": 0.0711 }
+    ]
+}
