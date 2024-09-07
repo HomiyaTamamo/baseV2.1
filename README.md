@@ -19,8 +19,8 @@ If you can hardly open the page or load the background images, report to me with
 - A：我修完bug后就直接上传了:D
 - Q：那V2.0在哪里？
 - A：https://istc-frame.github.io/base/
-- Q：更新日志用英文写的为什么QA用中文写的？
-- A：因为我英语不好，外加更新日志是@锦州南阳餐馆写的。
+- Q：更新日志用英文写的为什么Q&A用中文写的？
+- A：因为我英语不好，外加更新日志是@锦州南阳餐馆 写的。
 - Q：如果还有bug怎么办？
 - A：群里抓我，我不怎么看github。
 - Q：DLC更新后怎么办？
