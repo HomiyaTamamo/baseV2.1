@@ -3,13 +3,14 @@
 Fundamental fabrication for the webapp.
 
 If you can hardly open the page or load the background images, report to me with Issue.
-
+# 更新日志
 - 8.21 update: Basic IS-5 assets. Fix the uncoordinated borders.
 - 8.23 update: Lots of front-end optimization; Logic completion; Necessary component added.
 - 8.24 update: Statics update, fix font route.
 - 8.25 update: External json import module enabled.
 - 8.28 update: Simplified.
 - 9.7  update: Fixed bug with unlimited number of tree holes.
+# Q&A
 - Q：这是什么？
 - A：这是明日方舟集成战略比赛荆楚歌的计分器。
 - Q；程序主要完成人员都有谁？
@@ -28,4 +29,4 @@ If you can hardly open the page or load the background images, report to me with
 - A：我不知道:D
 - Q：保存功能呢？
 - A：有bug，在改了。
-关注荆楚歌喵关注荆楚歌谢谢喵
+# 关注荆楚歌喵关注荆楚歌谢谢喵
